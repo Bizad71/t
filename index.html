@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>۵۰ کلمه در هفته | یادگیری زبان ترکی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Nunito:wght@700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">T<span>+</span></div>
+    <div><h1>۵۰ کلمه در هفته</h1><p>هر هفته، ۵۰ قدم به زبان ترکی بهتر</p></div>
+  </div>
+  <div class="top-actions">
+    <button id="homeBtn" class="soft-btn">همه هفته‌ها</button>
+    <button type="button" id="globalImportBtn" class="import-top soft-btn" title="افزودن فایل لغات برای یک هفته">＋ افزودن فایل JSON</button>
+    <input id="globalImport" type="file" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<main class="shell">
+  <section id="weeksView">
+    <div class="intro">
+      <div><span class="eyebrow">برنامه یادگیری</span><h2>هفته‌های باقی‌مانده تا پایان سال</h2><p>یک هفته را انتخاب کن و لغات همان هفته را تمرین کن.</p></div>
+      <div class="year-pill"><span class="pulse"></span> سال ۱۴۰۵</div>
+    </div>
+    <div class="week-grid" id="weekGrid"></div>
+    <div class="hint"><span class="hint-icon">＋</span><span>برای وارد کردن لغات هر هفته، روی علامت + همان خانه بزن و فایل JSON آن هفته را انتخاب کن.</span></div>
+  </section>
+
+  <section id="wordsView" hidden>
+    <div class="week-heading">
+      <button id="backBtn" class="back-btn">→ برگشت به هفته‌ها</button>
+      <div class="week-heading-text"><span class="eyebrow">تمرین واژگان</span><h2 id="activeWeekTitle"></h2><p id="wordCount"></p></div>
+      <button type="button" id="weekImportBtn" class="import-week soft-btn">＋ وارد کردن JSON</button>
+      <input id="weekImport" type="file" accept=".json,application/json" hidden>
+    </div>
+    <div class="practice-note"><span>🔊</span> روی هر واژه ترکی بزن؛ تلفظش را بشنو و معنی فارسی را برای ۳ ثانیه ببین.</div>
+    <div class="word-grid" id="wordGrid"></div>
+    <div class="footer-note">برای شنیدن دوباره تلفظ، دوباره روی همان واژه بزن.</div>
+  </section>
+</main>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
